@@ -52,6 +52,13 @@ MIT License로 사용가능합니다.
 * **라이선스 :** Python Software Foundation License
 * **라이선스 전문 :** [PSF Doc](https://docs.python.org/3/license.html)
 
+### [KoNLPy](http://konlpy.org/ko/latest/#)
+> KoNLPy is a Python package for Korean natural language processing.
+
+* **용도 :**  한글 형태소 분석
+* **라이선스 :** GNU General Public License V3
+* **라이선스 전문 :** [GPLv3](http://www.gnu.org/licenses/gpl.html)
+
 ### [SearchFirstAndLastTrainbyFRCodeService](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-1191&tMenu=11)
 > 역외부코드로 지하철역별 첫차, 막차 시간 정보를 검색할 수 있도록 하는 API입니다.
 
