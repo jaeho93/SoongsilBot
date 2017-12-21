@@ -11,12 +11,12 @@ inout: 1 상행 내선 / 2 하행 외선
 '''
 def first_last_subway(week, inout):
     try:
-        my_url = 'http://openapi.seoul.go.kr:8088/key/xml/SearchFirstAndLastTrainbyFRCodeService/1/5/7/'+str(week)+'/'+str(inout)+'/738/'
+        my_url = 'http://openapi.seoul.go.kr:8088/4f4561516d6a616531323154624c724c/xml/SearchFirstAndLastTrainbyFRCodeService/1/5/7/'+str(week)+'/'+str(inout)+'/738/'
         html = urlopen(my_url)
         source = html.read()
         html.close()
     except:
-        return '지하철API 접속 오류!'
+        return '지하철API 접속 오류!\n'
 
     soup = BeautifulSoup(source, 'lxml')
     first_time = str(soup.find('first_time'))[12:-13]
@@ -39,7 +39,7 @@ def first_last_subway(week, inout):
 
 def arrival_subway(week, inout):
     try:
-        my_url = 'http://openapi.seoul.go.kr:8088/key/xml/SearchArrivalInfoByFRCodeService/1/5/738/'+str(inout)+'/'+str(week)
+        my_url = 'http://openapi.seoul.go.kr:8088/4f4561516d6a616531323154624c724c/xml/SearchArrivalInfoByFRCodeService/1/5/738/'+str(inout)+'/'+str(week)
         html = urlopen(my_url)
         source = html.read()
         html.close()
@@ -49,6 +49,9 @@ def arrival_subway(week, inout):
     soup = BeautifulSoup(source, 'lxml')
     arrive_time = soup.find_all('arrivetime')
     subway_name = soup.find_all('subwayname')
+
+    if(len(subway_name) == 0):
+        return '지하철 운행 시간이 아닙니다.\n'
 
     arrival_str = '----도착 정보-----\n'
     for i in range(5):
@@ -66,7 +69,7 @@ def get(inout_str):
     if today.weekday() in [6]:
         return arrival_subway(3,inout)+first_last_subway(3,inout)
 
-    header={'TDCProjectkey':'key'}
+    header={'TDCProjectkey':'0e716848-29bc-45cc-ab11-2d72c7ba7bad'}
     year=str(today.year)
     month=str(today.month).zfill(2)
     day=str(today.day).zfill(2)
