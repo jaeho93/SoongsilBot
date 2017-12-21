@@ -29,3 +29,17 @@ MIT License로 사용가능합니다.
 * **용도 :** 웹 프레임워크
 * **라이선스 :** The 3-Clause BSD License
 * **라이선스 전문 :** [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
+
+### [SearchFirstAndLastTrainbyFRCodeService](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-1191&tMenu=11)
+> 역외부코드로 지하철역별 첫차, 막차 시간 정보를 검색할 수 있도록 하는 API입니다.
+
+* **용도 :** 지하철 첫차와 막차 정보 검색
+* **라이선스 :** 저작자표시(BY)
+* **라이선스 전문 :** [저작자표시 2.0 대한민국 (CC BY 2.0 KR)](https://creativecommons.org/licenses/by/2.0/kr/)
+
+### [SearchArrivalInfoByFRCodeService](http://data.seoul.go.kr/openinf/openapiview.jsp?infId=OA-102&tMenu=11)
+> 역외부코드로 지하철역별 열차 도착 정보를 검색할 수 있도록 하는 API입니다.
+
+* **용도 :** 열차 도착 정보 검색
+* **라이선스 :** 저작자표시(BY)
+* **라이선스 전문 :** [저작자표시 2.0 대한민국 (CC BY 2.0 KR)](https://creativecommons.org/licenses/by/2.0/kr/)
