@@ -13,6 +13,9 @@ MIT License로 사용가능합니다.
 
 ## 개발_환경
 * Python 3
+* Amazon AWS EC2
+* Ubuntu Linux t2.micro
+* Apache HTTP Server
 
 ## 라이선스
 * [MIT License](LICENSE)
