@@ -22,3 +22,10 @@ MIT License로 사용가능합니다.
 * **용도 :** 웹 크롤링 및 파싱
 * **라이선스 :** Python Software Foundation License
 * **라이선스 전문 :** [PSF Doc](https://docs.python.org/3/license.html)
+
+### [Django](https://www.djangoproject.com/)
+> Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.
+
+* **용도 :** 웹 프레임워크
+* **라이선스 :** The 3-Clause BSD License
+* **라이선스 전문 :** [BSD-3-Clause](https://opensource.org/licenses/BSD-3-Clause)
