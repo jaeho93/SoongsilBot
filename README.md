@@ -21,4 +21,4 @@ MIT License로 사용가능합니다.
 
 * **용도 :** 웹 크롤링 및 파싱
 * **라이선스 :** Python Software Foundation License
-* **라이선스 전문 :** [Python Software Foundation License](https://docs.python.org/3/license.html)
+* **라이선스 전문 :** [PSF Doc](https://docs.python.org/3/license.html)
