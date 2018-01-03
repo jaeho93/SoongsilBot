@@ -11,7 +11,8 @@ inout: 1 상행 내선 / 2 하행 외선
 '''
 def first_last_subway(week, inout):
     try:
-        my_url = 'http://openapi.seoul.go.kr:8088/4f4561516d6a616531323154624c724c/xml/SearchFirstAndLastTrainbyFRCodeService/1/5/7/'+str(week)+'/'+str(inout)+'/738/'
+            # MYKEY는 할당
+        my_url = 'http://openapi.seoul.go.kr:8088/MYKEY/xml/SearchFirstAndLastTrainbyFRCodeService/1/5/7/'+str(week)+'/'+str(inout)+'/738/'
         html = urlopen(my_url)
         source = html.read()
         html.close()
@@ -39,7 +40,8 @@ def first_last_subway(week, inout):
 
 def arrival_subway(week, inout):
     try:
-        my_url = 'http://openapi.seoul.go.kr:8088/4f4561516d6a616531323154624c724c/xml/SearchArrivalInfoByFRCodeService/1/5/738/'+str(inout)+'/'+str(week)
+            # MYKEY는 할당
+        my_url = 'http://openapi.seoul.go.kr:8088/MYKEY/xml/SearchArrivalInfoByFRCodeService/1/5/738/'+str(inout)+'/'+str(week)
         html = urlopen(my_url)
         source = html.read()
         html.close()
@@ -69,7 +71,8 @@ def get(inout_str):
     if today.weekday() in [6]:
         return arrival_subway(3,inout)+first_last_subway(3,inout)
 
-    header={'TDCProjectkey':'0e716848-29bc-45cc-ab11-2d72c7ba7bad'}
+    # MYKEY는 할당
+    header={'TDCProjectkey':'MYKEY'}
     year=str(today.year)
     month=str(today.month).zfill(2)
     day=str(today.day).zfill(2)
