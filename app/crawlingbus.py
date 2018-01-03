@@ -19,22 +19,23 @@ def get(stNm):
         
     return arrival_bus(num)
  
+        # MYKEY는 할당
 def arrival_bus(num):
     try:
         if num == 1:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000073')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000073')
         elif num == 2:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000071')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000071')
         elif num == 3:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000072')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000072')
         elif num == 4:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000077')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000077')
         elif num == 5:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000076')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000076')
         elif num == 6:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000079')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000079')
         elif num == 7:
-            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%2Bab0GeRGOpLgg%3D%3D&stId=119000078')
+            html = urlopen('http://ws.bus.go.kr/api/rest/arrive/getLowArrInfoByStId?ServiceKey=MYKEY&stId=119000078')
 
         source = html.read()
 
@@ -70,8 +71,9 @@ def arrival_bus(num):
 
     
     
+        # MYKEY는 할당
     for i in range(len(busRouteId)):
-        html2 = urlopen('http://ws.bus.go.kr/api/rest/busRouteInfo/getRouteInfo?ServiceKey=2ISgskYNUJKvIXsflwJL4PXaVlxKg9ykM7s3zxWSwivy7UJiocbKl9YYwaucREcnYXenFH6PD%252Bab0GeRGOpLgg%253D%253D&busRouteId='+str(busRouteId[i]))
+        html2 = urlopen('http://ws.bus.go.kr/api/rest/busRouteInfo/getRouteInfo?ServiceKey=MYKEY&busRouteId='+str(busRouteId[i]))
         source = html.read()
         html.close()
         soup = BeautifulSoup(source, "xml")
